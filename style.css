@@ -1,0 +1,249 @@
+:root {
+  --text: #1c1c1e;
+  --text-secondary: #6e6e73;
+  --accent: #0071e3;
+  --border: #d2d2d7;
+  --bg: #ffffff;
+  --bg-secondary: #f5f5f7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --accent: #2997ff;
+    --border: #424245;
+    --bg: #000000;
+    --bg-secondary: #1c1c1e;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.current {
+  color: var(--accent);
+}
+
+main {
+  padding: 48px 0 80px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+}
+
+.updated {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.lead {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 40px 0 12px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+ul, ol {
+  margin: 0 0 16px 24px;
+  font-size: 15px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  width: 34%;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.note {
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0 48px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+footer nav {
+  margin-bottom: 16px;
+}
+
+/* トップページ */
+.hero {
+  text-align: center;
+  padding: 64px 0 48px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 17px;
+  color: var(--text-secondary);
+}
+
+.cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 48px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.card h2 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.features {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 48px 0;
+}
+
+.feature h3 {
+  margin-top: 0;
+}
+
+.feature p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 30px; }
+  h1 { font-size: 24px; }
+  th { width: 40%; }
+  nav { gap: 14px; }
+}
